@@ -7,7 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/partSearch', function(req, res, next) {
-  res.render('partSearchPage', {title: 'Guntner Parts Search Page'})
+  res.render('partSearchPage')
+});
+
+router.get('/adminPage', function(req, res, next) {
+  res.render('adminLandingPage')
 });
 
 module.exports = router;
