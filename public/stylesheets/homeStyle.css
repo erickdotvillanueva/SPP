@@ -1,0 +1,41 @@
+/* Main Page */
+
+body{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("/images/glass_buidling.jpg");   
+}
+.landingSelect{
+    text-align: center;
+    margin-top: 20%;
+    color: white;
+}
+.landingDesc{
+    text-align: center; 
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.mycentered-text{
+    text-align: center;
+    margin-top: 15%;
+}
+.webDesc{
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.webDesc2{
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Login Section */
+#loginElement {
+    margin-right: 2%;
+}
+#passwordElement {
+    margin-right: 2%;
+}
+#loginSection{
+    margin-right: 5%;
+}

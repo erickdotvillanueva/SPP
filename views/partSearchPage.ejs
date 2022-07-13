@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Search Parts</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg static-top bg-light navbar-light">
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="container d-flex justify-content-center">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center mb-3">
+            <a class="navbar-brand" href="/GuntnerPartsList/landingPage.html"
+    
+            ><img
+              id="MDB-logo"
+              src="images/GuntnerLogo.png"
+              alt="MDB Logo"
+              draggable="false"
+              height="60"
+          /></a>
+          </div>
+          <!--
+          <div class="col-12 d-flex justify-content-center">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav align-items-center mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="/GuntnerPartsList/searchParts.html"><i class="fas fa-plus-circle pe-2"></i>Search Part</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="/GuntnerPartsList/updateParts.html"><i class="fas fa-heart pe-2"></i>Update Part Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="/GuntnerPartsList/addDeleteParts.html"><i class="fas fa-heart pe-2"></i>Add or Delete Part</a>
+                </li>
+              </ul>
+            </div>
+          -->
+          </div>
+        </div>
+      </div>
+      </nav>
+
+      <br>
+      <h3 id="pageTitle">Part Search</h3>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h3 id="enterh3">Enter Part</h3>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">#</span>
+                    </div>
+                    <input id="partSearchInput" type="number" class="form-control" placeholder="123456789" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <p id="noPartErrorBox"></p>
+                <button type="button" id="partSearchButton" class="btn btn-primary">Search</button>
+                <hr/>
+                <h4 id="partIDField">Part ID: </h4>
+                <br>
+                <h4>Description: </h4>
+                <p id="partDescField">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet ligula enim, sit amet auctor.</p>
+                <br>
+                <div class="discountMenu">
+                <h4>Discount:</h4>
+                <div class="input-group mb-3">
+                  <input id="discountInput" type="number" class="form-control" placeholder="35" aria-label="Username" aria-describedby="basic-addon1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">%</span>
+                  </div>
+              </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary" id="discountApply">Apply</button>
+                </div>
+              </div>
+                <br>
+                <br>
+                <h4 id="partPriceField">Price (USD): </h4>
+                <h4 id="updatedPriceField"></h4>
+                <br>
+                <h4 id="partPDFField">PDF Filename: </h4>
+            </div>
+            <div class="col-lg">
+              <embed id="pdfDisplayWindow" src="" width="700px" height="1200px" /> 
+            </div>
+        </div>
+      </div>
+      <script src="/GuntnerPartsList/partSearch.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
