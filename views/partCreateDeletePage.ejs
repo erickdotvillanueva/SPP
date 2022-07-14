@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Search Parts</title>
+    <title>Add / Delete Parts</title>
 </head>
 <body>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 
     <nav class="navbar navbar-expand-lg static-top bg-light navbar-light">
         <button
@@ -25,19 +28,18 @@
       <div class="container d-flex justify-content-center">
         <div class="row">
           <div class="col-12 d-flex justify-content-center mb-3">
-            <a class="navbar-brand" href="/"
-    
+            <a class="navbar-brand" href="/adminPage"
             ><img
               id="MDB-logo"
-              src="images/GuntnerLogo.png"
+              src="/images/GuntnerLogo.png"
               alt="MDB Logo"
               draggable="false"
               height="60"
           /></a>
           </div>
-          <!--
           <div class="col-12 d-flex justify-content-center">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!--
               <ul class="navbar-nav align-items-center mx-auto">
                 <li class="nav-item">
                   <a class="nav-link mx-2" href="/GuntnerPartsList/searchParts.html"><i class="fas fa-plus-circle pe-2"></i>Search Part</a>
@@ -57,53 +59,40 @@
       </nav>
 
       <br>
+      <h3 id="pageTitle"></h3>
 
       <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h3 id="pageTitle">Part Search</h3>
+                <h2>Create</h2>
+                <h4>Part ID: </h4>
+                <input type="text" id="changeID" class="form-control" placeholder="123456789" aria-label="Username" aria-describedby="basic-addon1">
                 <br>
-                <h3 id="enterh3">Enter Part</h3>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1">#</span>
-                    </div>
-                    <input id="partSearchInput" type="number" class="form-control" placeholder="123456789" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <p id="noPartErrorBox"></p>
-                <button type="button" id="partSearchButton" class="btn btn-primary">Search</button>
-                <hr/>
-                <h4 id="partIDField">Part ID: </h4>
+                <h4>Price (USD): </h4>
+                <input type="number" id="changePrice" class="form-control" placeholder="10.01" aria-label="Username" aria-describedby="basic-addon1">
                 <br>
                 <h4>Description: </h4>
-                <p id="partDescField">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet ligula enim, sit amet auctor.</p>
+                <input type="text" id="changeDesc" class="form-control" placeholder="Lorem ipsum dolor sit amet" aria-label="Username" aria-describedby="basic-addon1">
                 <br>
-                <div class="discountMenu">
-                <h4>Discount:</h4>
-                <div class="input-group mb-3">
-                  <input id="discountInput" type="number" class="form-control" placeholder="35" aria-label="Username" aria-describedby="basic-addon1">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">%</span>
-                  </div>
-              </div>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary" id="discountApply">Apply</button>
-                </div>
-              </div>
+                <h4>PDF Name (include .pdf)</h4>
+                <p>Add file to parts folder in server, this is just the reference name</p>
+                <input type="text" id="changePDF" class="form-control" placeholder="00000DataSheet.pdf" aria-label="Username" aria-describedby="basic-addon1">
                 <br>
-                <br>
-                <h4 id="partPriceField">Price (USD): </h4>
-                <h4 id="updatedPriceField"></h4>
-                <br>
-                <h4 id="partPDFField">PDF Filename: </h4>
+                <button id="addPartButton" type="button" class="btn btn-success">Upload</button>
+                <p id="createStatus">Status: </p>
+
             </div>
             <div class="col-lg">
-              <embed id="pdfDisplayWindow" src="" width="700px" height="1200px" /> 
+                <h2>Delete</h2>
+                <h4>Part ID: </h4>
+                <input type="number" id="deleteID" class="form-control" placeholder="123456789" aria-label="Username" aria-describedby="basic-addon1">
+                <br>
+                <button id="removePartButton" type="button"  class="btn btn-danger">Delete</button>
+                <br>
+                <p id="deleteStatus">Status: </p>
             </div>
         </div>
       </div>
-      <script src="/GuntnerPartsList/partSearch.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      <script src="/GuntnerPartsList/partAddSub.js"></script>
 </body>
 </html>

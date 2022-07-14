@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/homeStyle.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <link rel="stylesheet" href="/stylesheets/homeStyle.css">
     <title>Guntner Parts List</title>
 </head>
 <body>
@@ -28,10 +27,10 @@
 >
   <i class="fas fa-bars"></i>
 </button>
-<div class="container d-flex justify-content-start">
+<div class="container d-flex justify-content-center">
   <div class="row">
     <div class="col-12 d-flex justify-content-center mb-3">
-      <a class="navbar-brand" href="/"
+      <a class="navbar-brand" href="/adminPage"
       ><img
         id="MDB-logo"
         src="/images/GuntnerLogo.png"
@@ -59,13 +58,14 @@
       </div>
     </div>
   </div>
-</div>
 
-<form class="d-flex justify-content-center" id="landingLogin">
-        <input class="form-control mr-sm-2" id="loginElement" type="text" placeholder="Login" aria-label="Login">
-        <input class="form-control mr-sm-2" id="passwordElement" type="password" placeholder="Password" aria-label="Password">
-        <button type="button" id="loginSection" class="btn btn-primary">Login</button>
+  <form class="d-flex justify-content-center" id="landingLogin">
+    <a href="/GuntnerPartsList/landingPage.html">
+    <button type="button" id="logoutButton" class="btn btn-primary">Log Out</button>
+  </a>
 </form>
+
+</div>
 </nav>
 
 <br>
@@ -74,20 +74,37 @@
 
 <div class="container">
   <div class="row">
+    <!--  REMOVED ACCESS TO SPARE PARTS PAGE
     <div class="col">
         <div class="mycentered-text">
-          <a href="/partSearch">
-            <button type="button" id="landingButton" class="btn btn-primary btn-lg"><h1 class="webDesc2">Search by Part #</h1></button>
-          </a>
-          <a href="/GuntnerPartsList/searchPartsD.html">
-            <button type="button" id="landingButton" class="btn btn-primary btn-lg"><h1 class="webDesc2">Search By Description</h1></button>
+          <a href="/GuntnerPartsList/searchParts.html">
+            <button type="button" id="landingButton" class="btn btn-primary btn-lg"><h1 class="webDesc2">Search</h1></button>
           </a>
         </div>
         <br>
-      <p class="landingDesc">Search the database using part number or Description. Includes Price, Description and downloadable Data Sheet</p>
+      <p class="landingDesc">Search the database using part number. Includes Price, Description and downloadable Data Sheet</p>
     </div>
+  -->
+    <div class="col">
+      <div class="mycentered-text">
+        <a href="/partUpdate">
+          <button type="button" id="landingButton" class="btn btn-primary btn-lg"><h1 class="webDesc2">Update</h1></button>
+        </a>
+      </div>
+      <br>
+      <p class="landingDesc">Update information of parts already registered in the database.</p>
+    </div>
+    <div class="col">
+      <div class="mycentered-text">
+        <a href="/partCreateDelete">
+          <button type="button" id="landingButton" class="btn btn-primary btn-lg"><h1 class="webDesc2">Add or Remove</h1></button>
+        </a>
+      </div>
+      <br>
+      <p class="landingDesc">Add or Remove part information from the database (does not remove PDF file from server)</p>
+    </div>
+  </div>
 </div>
 
-<script src="/GuntnerPartsList/adminLogin.js"></script>
 </body>
 </html>
