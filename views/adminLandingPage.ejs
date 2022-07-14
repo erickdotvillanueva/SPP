@@ -1,1 +1,110 @@
-<h1>Admin Landing Page Test</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/homeStyle.css">
+    <title>Guntner Parts List</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<nav class="navbar navbar-expand-lg static-top bg-light navbar-light">
+  <button
+  class="navbar-toggler"
+  type="button"
+  data-mdb-toggle="collapse"
+  data-mdb-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+  <i class="fas fa-bars"></i>
+</button>
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center mb-3">
+      <a class="navbar-brand" href="/adminPage"
+      ><img
+        id="MDB-logo"
+        src="/images/GuntnerLogo.png"
+        alt="MDB Logo"
+        draggable="false"
+        height="60"
+    /></a>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-center mx-auto">
+          <!--
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/GuntnerPartsList/searchParts.html"><i class="fas fa-plus-circle pe-2"></i>Search Part</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/GuntnerPartsList/updateParts.html"><i class="fas fa-heart pe-2"></i>Update Part Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/GuntnerPartsList/addDeleteParts.html"><i class="fas fa-heart pe-2"></i>Add or Delete Part</a>
+          </li>
+          -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <form class="d-flex justify-content-center" id="landingLogin">
+    <a href="/GuntnerPartsList/landingPage.html">
+    <button type="button" id="logoutButton" class="btn btn-primary">Log Out</button>
+  </a>
+</form>
+
+</div>
+</nav>
+
+<br>
+<br>
+<h1 class="webDesc">Güntner Parts Database</h1>
+
+<div class="container">
+  <div class="row">
+    <!--  REMOVED ACCESS TO SPARE PARTS PAGE
+    <div class="col">
+        <div class="mycentered-text">
+          <a href="/GuntnerPartsList/searchParts.html">
+            <button type="button" id="landingButton" class="btn btn-primary btn-lg"><h1 class="webDesc2">Search</h1></button>
+          </a>
+        </div>
+        <br>
+      <p class="landingDesc">Search the database using part number. Includes Price, Description and downloadable Data Sheet</p>
+    </div>
+  -->
+    <div class="col">
+      <div class="mycentered-text">
+        <a href="/partUpdate">
+          <button type="button" id="landingButton" class="btn btn-primary btn-lg"><h1 class="webDesc2">Update</h1></button>
+        </a>
+      </div>
+      <br>
+      <p class="landingDesc">Update information of parts already registered in the database.</p>
+    </div>
+    <div class="col">
+      <div class="mycentered-text">
+        <a href="/partCreateDelete">
+          <button type="button" id="landingButton" class="btn btn-primary btn-lg"><h1 class="webDesc2">Add or Remove</h1></button>
+        </a>
+      </div>
+      <br>
+      <p class="landingDesc">Add or Remove part information from the database (does not remove PDF file from server)</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
