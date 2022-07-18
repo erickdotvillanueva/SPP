@@ -26,3 +26,7 @@ a {
 #landingButton:hover {
   animation: bounce .5s;
 }
+
+.navbar-brand{
+  padding-left: 16px;
+}

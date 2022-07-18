@@ -22,4 +22,8 @@ router.get('/partCreateDelete', function(req, res, next) {
   res.render('partCreateDeletePage')
 });
 
+router.get('/shoppingCart', function(req, res, next) {
+  res.render('shoppingCartPage')
+});
+
 module.exports = router;
