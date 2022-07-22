@@ -22,6 +22,9 @@ a {
     }
 }
 
+#returnToSearchButton{
+  width: 210.08px;
+}
 
 #landingButton:hover {
   animation: bounce .5s;
@@ -29,4 +32,17 @@ a {
 
 .navbar-brand{
   padding-left: 16px;
+}
+
+#shoppingItems {
+  margin-bottom: 20px;
+  padding: 5px;
+  background-color: #ffffff;
+  font-size: medium;
+}
+
+#shoppingCartItems{
+  list-style-type: none;
+  padding: 20px;
+  background-color: #0275d8;
 }

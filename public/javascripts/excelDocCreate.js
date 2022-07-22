@@ -38,5 +38,5 @@ function s2ab(s){
 }
 
 $('#PDFgeneratorButton').click(function(){
-    saveAs(new Blob([s2ab(wbout)], {type:"application/octet-stream"}), 'GuntnerSPExport.xlsx');
+    saveAs(new Blob([s2ab(wbout)], {type:"application/octet-stream"}), 'GuntnerSPExport' + mm +'-'+ dd +'-'+ yyyy + '.xlsx');
 });
